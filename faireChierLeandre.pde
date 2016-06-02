@@ -5,10 +5,6 @@ int nombreAnimation = 6;
 Animation[] leandre = new Animation[nombreAnimation];
 int test = 0; //curseur objets
 
-//CONFIGURATION ENTREES par TXT
-PrintWriter periph;
-String[] lignes;
-
 //ARDUINO
 Serial myPort;
 int nombreCapteurs = 4; //3 piezos, 1 photoresistance
