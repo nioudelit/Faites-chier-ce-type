@@ -51,8 +51,8 @@ void arduino() {
           test = 0;
         }
       }
-    } else {
-      println("capte rien !");
-    }
+    } //else {
+      //println("capte rien !");
+    //}
   }
 }

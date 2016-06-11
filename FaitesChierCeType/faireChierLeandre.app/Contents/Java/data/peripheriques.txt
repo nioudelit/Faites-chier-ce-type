@@ -1,0 +1,10 @@
+0 /dev/cu.Bluetooth-Incoming-Port
+1 /dev/cu.Bluetooth-Modem
+2 /dev/cu.HC-06-DevB
+3 /dev/cu.iPhonedeJohanna-Wireles
+4 /dev/cu.usbmodem641
+5 /dev/tty.Bluetooth-Incoming-Port
+6 /dev/tty.Bluetooth-Modem
+7 /dev/tty.HC-06-DevB
+8 /dev/tty.iPhonedeJohanna-Wireles
+9 /dev/tty.usbmodem641

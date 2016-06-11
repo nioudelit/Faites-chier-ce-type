@@ -48,7 +48,6 @@ void draw() {
   for (int i = 0; i < in.bufferSize(); i++) {
     son = map(in.mix.get(i), -1, 1, 0, 100);
   }
-
   for (int i = 0; i < leandre.length; i++) {
     leandre[i].reset(test);
   }
@@ -56,6 +55,5 @@ void draw() {
   if (test == 0) {
     arduino();
   }
-
   //println(son);
 }
