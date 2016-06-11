@@ -1,7 +1,7 @@
 import processing.serial.*;
 
 //ANIMATION
-int nombreAnimation = 6;
+int nombreAnimation = 7;
 Animation[] leandre = new Animation[nombreAnimation];
 int test = 0; //curseur objets
 
@@ -23,8 +23,9 @@ void setup() {
   leandre[3] = new Animation("chocforcetrois-", 37, 2, 3);
   leandre[4] = new Animation("bruit_un-", 73, 2, 4);
   leandre[5] = new Animation("bruit_deux-", 29, 2, 5);
+  leandre[6] = new Animation("lumiere_deux-", 21, 2, 6);
   println("Images… ok !!!");
-  frameRate(52);
+  //frameRate(52);
 }
 
 void draw() {

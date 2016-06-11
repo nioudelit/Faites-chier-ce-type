@@ -14,5 +14,7 @@ void parametresSerial() {
   periph.flush();
   periph.close();
   String portName = Serial.list()[config];
+  println("port choisi: " + config);
   myPort = new Serial(this, portName, 9600);
+  myPort.bufferUntil('\n');
 }

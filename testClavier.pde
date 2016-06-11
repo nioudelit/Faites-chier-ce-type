@@ -17,6 +17,9 @@ void keyReleased() {
   if (key == 'y') {
     test = 5;
   }
+   if (key == 'u') {
+    test = 6;
+  }
   if (key == 'x') {
     println("tchao"); 
     noLoop(); 
