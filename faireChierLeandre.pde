@@ -1,4 +1,10 @@
 import processing.serial.*;
+import ddf.minim.*;
+
+//SON 
+Minim minim;
+AudioInput in;
+float son;
 
 //ANIMATION
 int nombreAnimation = 7;
@@ -10,6 +16,13 @@ Serial myPort;
 int nombreCapteurs = 4; //3 piezos, 1 photoresistance
 String data;
 float[] valeurs = new float[nombreCapteurs];
+
+//SEUILS
+
+float seuil1 = 5;
+float seuil2 = 20;
+float seuil3 = 40;
+float seuil4 = 400;
 
 void setup() {
   //size(720, 405, P2D);
@@ -25,10 +38,17 @@ void setup() {
   leandre[5] = new Animation("bruit_deux-", 29, 2, 5);
   leandre[6] = new Animation("lumiere_deux-", 21, 2, 6);
   println("Images… ok !!!");
+
+  minim = new Minim(this);
+  in = minim.getLineIn();
   //frameRate(52);
 }
 
 void draw() {
+  for (int i = 0; i < in.bufferSize(); i++) {
+    son = map(in.mix.get(i), -1, 1, 0, 100);
+  }
+
   for (int i = 0; i < leandre.length; i++) {
     leandre[i].reset(test);
   }
@@ -36,4 +56,6 @@ void draw() {
   if (test == 0) {
     arduino();
   }
+
+  //println(son);
 }

@@ -5,7 +5,7 @@ class Animation {
   int identifiant;
 
   Animation(String nom, int nombreImages, 
-            int vitesseAnimation, int id) {
+    int vitesseAnimation, int id) {
     images = new PImage[nombreImages];
     for (int i = 0; i < nombreImages-1; i++) {
       images[i] = loadImage(nom + i + ".jpg");
@@ -17,7 +17,7 @@ class Animation {
 
   void afficher(int valide) {
     if (valide == identifiant) {
-      if(frameCount % vitesse == 0){
+      if (frameCount % vitesse == 0) {
         curseur++;
       }
       if (curseur >= images.length-1) {
@@ -29,9 +29,9 @@ class Animation {
       image(images[curseur], width/2, height/2);
     }
   }
-  
-  void reset(int verif){
-    if(verif != identifiant){
+
+  void reset(int verif) {
+    if (verif != identifiant) {
       curseur = 0;
     }
   }
